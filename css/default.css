@@ -1,0 +1,94 @@
+/*стили по умолчанию*/
+html {
+    box-sizing: border-box;
+    /* это свойтсво  не наследуюется*/
+}
+
+*,
+::before,
+*::after {
+    box-sizing: inherit;
+    /* наследуюем знчение  box-sizing для всх элементов*/
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: Inter, sans-serif;
+    /*sans-serif(без засечек) запасной шрифт, если iNter не подключиться*/
+}
+
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    /*не обязатльно*/
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.container {
+    max-width: 1240px;
+    /*1180 + 30px(padding-left) + 30px(padding-right)*/
+    /*ширина контента*/
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+@media(max-width: 1024px) {
+
+    /* <1024 */
+    .container {
+        /*ширина контента*/
+        max-width: 840px;
+        /*780-контент + 30px(padding-left) + 30px(padding-right)*/
+    }
+
+}
+
+
+@media(max-width: 768px) {
+
+    /* <768 */
+    .container {
+        max-width: 740px;
+        /*680-контент + 30px(padding-left) + 30px(padding-right)*/
+    }
+
+}
+
+
+@media(max-width: 480px) {
+
+    /* <480 */
+    .container {
+        max-width: 460px;
+        /*460-контент + 15px(padding-left) + 15px(padding-right)*/
+        padding: 0 15px;
+    }
+
+}

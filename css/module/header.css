@@ -1,0 +1,60 @@
+.header {
+    position: relative;
+    z-index: 1;
+    /* чобы выше было чем все сотальнве эелменты*/
+    background-color: #fff;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+}
+
+.header__nav-btn {
+    /* кнпока мобилки */
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    /* <768 */
+
+    .header__nav-btn {
+        /* кнпока мобилки */
+        display: block;
+        background-color: transparent;
+        border: 0;
+
+        /* убираем  у иконки svg отступ нижний*/
+        line-height: 0;
+
+    }
+
+    .header__navigation {
+        position: absolute;
+        /* поpициониурем ul относительно header*/
+        bottom: 0;
+        /* left: 0 и right: 0 чтоб элемент растянулся*/
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        padding: 16px 30px;
+        background-color: #fff;
+        /*меню будет выезжать плавно*/
+        transition: transform 0.36s ease-in-out;
+
+    }
+
+
+    .header__navigation--open {
+        /*элемнет опустится вниз*/
+        transform: translateY(100%);
+
+    }
+
+}
