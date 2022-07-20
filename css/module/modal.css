@@ -1,0 +1,12 @@
+.modal {
+    margin: 40px 0;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: default;
+    text-align: left;
+
+    /*свойоство opacity будет повлятся за 0.36s плавно*/
+    transition: opacity 0.36s ease-in-out;
+
+    white-space: normal;
+}

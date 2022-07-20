@@ -58,6 +58,53 @@ h4 {
     padding: 0 30px;
 }
 
+.overlay {
+    /*оверлей то что окружает мод окно*/
+    /*зафиикисровано*/
+    position: fixed;
+    /*или  top:0 bottom:0 right:0 left:0*/
+    inset: 0;
+    /*чтоыб был выше .header, у .header z-index:1*/
+    z-index: 999;
+    /*чтомодалка юыла по  центру*/
+    text-align: center;
+
+    /*если модалка не будет вмещаться в экран по верикали, то появится стрколл*/
+    overflow-y: auto;
+    /*гор скролл не будет поялаться*/
+    overflow-x: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    /*время анимации*/
+    transition-duration: 0.36s;
+
+    /*эффект анимации*/
+    transition-timing-function: ease-in-out;
+
+    /*чтобы псевдоэлеент был рядом с мод окном, чтоб он не преносился вниз или верх*/
+    white-space: nowrap;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+
+.overlay:after {
+    /*псевдо-элемент*/
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+
+.overlay-open {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 @media(max-width: 1024px) {
 
@@ -86,8 +133,7 @@ h4 {
 
     /* <480 */
     .container {
-        max-width: 460px;
-        /*460-контент + 15px(padding-left) + 15px(padding-right)*/
+
         padding: 0 15px;
     }
 
