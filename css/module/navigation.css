@@ -19,10 +19,14 @@
 
     /*<768*/
     .navigation__list {
-        padding: 16px 30px;
+
         /*шрина контента*/
         max-width: 740px;
         margin: 0 auto;
+    }
+
+    .navigation__list--header {
+        padding: 16px 30px;
     }
 }
 
@@ -31,10 +35,17 @@
 
     /*<480*/
     .navigation__list {
-        padding-left: 15px;
-        padding-right: 15px;
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .navigation__list--header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navigation__item--footer {
+        margin-right: 16px;
     }
 
     .navigation__item {

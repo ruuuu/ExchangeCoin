@@ -1,0 +1,47 @@
+.advantage {}
+
+.advantage__list-btn {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 54px;
+}
+
+.advantage__item {}
+
+.advantage__item--active {}
+
+.advantage__button {
+    width: 180px;
+    padding: 10px 36px;
+
+    /* height: 47px; */
+    background-color: #1C88EB;
+    border-radius: 20px;
+    border: 0;
+
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+    /*анимация при наведении*/
+
+
+    /*анимация при клике*/
+    /*ОСТАОВЛАСЬ на 23:43*/
+
+
+}
+
+.advantage__list-content {}
+
+.advantage__item-content {}
+
+.advantage__item-content--convenience {}
+
+.advantage__item-content--active {}
+
+.advantage__item-content--speed {}
+
+.advantage__item-content--quality {}
+
+.advantage__item-content--security {}

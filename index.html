@@ -25,7 +25,7 @@
 <body>
     <header class="header">
         <div class="container header__container">
-            <img class="header__img" src="img/logo.svg" alt="logo">
+            <img class="header__img" src="img/logo.svg" alt="Логотип Крипто">
 
             <button class="header__nav-btn" aria-label="Открыть меню">
                 <!--aria-label нужен  для слепых людей котрые используют програмы-читалки, когда на кнопках нет надписи его испоьзуют-->
@@ -36,11 +36,12 @@
             </button>
 
             <nav class="header__navigation navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">Почему выбирают нас?</a>
+                <ul class="navigation__list navigation__list--header">
+                    <li class="navigation__item navigation__item--footer">
+                        <a href="#about-us" class="navigation__link">Почему выбирают нас?</a>
+                        <!-- у href="#about-us" чтобы при нажтии на нее, скроллили к секции about-us -->
                     </li>
-                    <li class="navigation__item">
+                    <li class="navigation__item navigation__item--footer">
                         <a href="" class="navigation__link">Частые вопросы</a>
                     </li>
                 </ul>
@@ -59,6 +60,77 @@
                 <button class="hero__btn">Зарегистрироваться</button>
             </div>
         </section>
+
+
+        <div class="about-us">
+            <div class="container" id="about-us">
+                <!-- id указываем чтобы из вехнего меню можно был скроллить к этой секции-->
+                <h2 class="about-us__title">Почему выбирают нас?</h2>
+
+                <div class="about-us__container">
+                    <div class="about-us__advantage advantage">
+
+                        <ul class="advantage__list-btn">
+                            <li class="advantage__item  advantage__item--active">
+                                <button class="advantage__button">Удобство</button>
+                            </li>
+                            <li class="advantage__item">
+                                <button class="advantage__button">Скорость</button>
+                            </li>
+                            <li class="advantage__item">
+                                <button class="advantage__button">Качество</button>
+                            </li>
+                            <li class="advantage__item">
+                                <button class="advantage__button">Надежность</button>
+                            </li>
+                        </ul>
+
+                        <ul class="advantage__list-content">
+                            <!-- этот классadvantage__item-content--convenience нужен чтобы пседоэлемнет добавить(иконки)-->
+                            <li
+                                class="advantage__item-content advantage__item-content--convenience advantage__item-content--active">
+                                Наш сервис обмена криптовалюты Crypto интуитивно понятен и удобен в использовании. С
+                                нами
+                                просто.
+                            </li>
+                            <li class="advantage__item-content advantage__item-content--speed">
+                                У нас самая быстрая скорость по обмену криптовалюты по подобным сервисам в России
+                            </li>
+                            <li class="advantage__item-content advantage__item-content--quality">
+                                Нашу платформу выбирают миллионы людей
+                            </li>
+                            <li class="advantage__item-content advantage__item-content--security">
+                                Ваши пароли под надежной защитой. Нас невозможно взломать
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-us__exchange-rates exchange-rates">
+                        <h3 class="exchange-rates__title">Изменение курса в режиме реального времени</h3>
+
+                        <ul class="exchange-rates__list">
+                            <li class="exchange-rates__item exchange-rates__item--up">
+                                <!-- этот класс exchange-rates__item--up нужен чтобы пседоэлемнет добавить(зеленая/крансая стрлеочка)-->
+                                <span class="exchange-rates__currency">RUB/AUD</span>
+                                <span class="exchange-rates__value">25.59</span>
+                            </li>
+                            <li class="exchange-rates__item exchange-rates__item--up">
+                                <span class="exchange-rates__currency">HKD/BYR</span>
+                                <span class="exchange-rates__value">27.76</span>
+                            </li>
+                            <li class="exchange-rates__item exchange-rates__item--down">
+                                <span class="exchange-rates__currency">AUD/CNH</span>
+                                <span class="exchange-rates__value">72.68</span>
+                            </li>
+                            <li class="exchange-rates__item exchange-rates__item--up">
+                                <span class="exchange-rates__currency">JPY/GBP</span>
+                                <span class="exchange-rates__value">32.96</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
     </main>
 
 
@@ -99,11 +171,29 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container"></div>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <img clas="footer__logo" src="img/logo.svg" alt="ЛоготипКрипто">
+
+            <div class="footer__navigation navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#about-us" class="navigation__link">Почему выбирают нас?</a>
+                        <!-- у href="#about-us" чтобы при нажтии на нее, скроллили к секции about-us -->
+                    </li>
+                    <li class="navigation__item">
+                        <a href="" class="navigation__link">Частые вопросы</a>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="footer__copyright">© Crypto, 2022</p>
+
+            <a class="footer__design" href="https://t.me/@Mrshmallowww">@Mrshmallowww</a>
+
+        </div>
     </footer>
-
-
 </body>
 
 </html>

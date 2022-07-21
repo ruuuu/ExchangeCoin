@@ -1,0 +1,36 @@
+.about-us {
+    padding: 40px 0;
+
+}
+
+
+.about-us__title {
+    margin-bottom: 34px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 53px;
+    color: #55C2FF;
+}
+
+
+.about-us__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.about-us__advantage {
+    /*флекс элемент*/
+    /*если останется свобдное простарвно то элемен растянется*/
+    flex-grow: 1;
+    width: 100%;
+}
+
+.about-us__exchange-rates {
+    /*флекс элемент*/
+    /*здесь растягиваться не будет, задем фиксированное значение*/
+    max-width: 380px;
+
+}
