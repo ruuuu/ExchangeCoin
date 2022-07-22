@@ -12,10 +12,10 @@
 
 .advantage__button {
     width: 180px;
-    padding: 10px 36px;
+    /* padding: 10px 36px; */
 
-    /* height: 47px; */
-    background-color: #1C88EB;
+    height: 47px;
+    background-color: #68B7FF;
     border-radius: 20px;
     border: 0;
 
@@ -23,25 +23,94 @@
     font-size: 22px;
     line-height: 27px;
     color: #FFFFFF;
+
+    /*указываем какие свойтсва будем анимировать*/
+    transition-property: border-color, background-color;
+
+    /*скорость анимации*/
+    transition-duration: 0.36s;
+
+    /*с каким утсркением дейсвету анимация*/
+    transition-timing-function: ease-in-out;
+
     /*анимация при наведении*/
 
-
     /*анимация при клике*/
-    /*ОСТАОВЛАСЬ на 23:43*/
+
+    border: 1px solid transparent;
+}
 
 
+.advantage__button:hover {
+    border-color: #1C88EB;
+}
+
+.advantage__button:active {
+    background-color: #1C88EB;
+}
+
+
+.advantage__button--active {
+    background-color: #1C88EB;
+    border: 1px solid #68B7FF;
 }
 
 .advantage__list-content {}
 
-.advantage__item-content {}
+.advantage__item-content {
+    /*li*/
 
-.advantage__item-content--convenience {}
+    max-width: 640px;
+    margin: 0 auto;
+    display: none;
+    gap: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* cover - заполнить все пространство, contain - возьми самый большой размер, растянись по нему */
+    background-size: contain;
 
-.advantage__item-content--active {}
+    font-family: 'IBM Plex Sans';
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 29px;
+    color: #000000;
+}
 
-.advantage__item-content--speed {}
 
-.advantage__item-content--quality {}
+.advantage__item-content::before {
+    /* псведоэлемент картинка */
 
-.advantage__item-content--security {}
+    /*чтоб картинка отображалась*/
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    /*флекс элементу запрещаем сжиматься*/
+    flex-shrink: 0;
+    /* background-color: #1C88EB; */
+}
+
+
+.advantage__item-content--active {
+    display: flex;
+}
+
+
+.advantage__item-content--convenience::before {
+    background-image: url('../../img/convenience.svg');
+}
+
+
+.advantage__item-content--speed::before {
+    background-image: url('../../img/speed.svg');
+}
+
+
+.advantage__item-content--quality::before {
+    background-image: url('../../img/quality.svg');
+}
+
+
+.advantage__item-content--security::before {
+    background-image: url('../../img/security.svg');
+}
