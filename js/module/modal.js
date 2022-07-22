@@ -35,9 +35,9 @@ const form = document.querySelector('.modal__form'); // форма отпрвк�
 const modalTitle = document.querySelector('.modal__titile');
 
 
-form.addEventListener('submit', (evt) => { // событие отрпавк формы
+form.addEventListener('submit', (evt) => { // событие отрпавки формы
 
-    evt.preventDefault(); // отменеяпм действие по умолчанию(презагпука станицы)
+    evt.preventDefault(); // отменеям действие по умолчанию(презагрузка страницы)
 
     const data = { // здесь будем хранить  данные формы (объект)
         name: form.name.value,
