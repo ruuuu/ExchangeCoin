@@ -13,7 +13,6 @@
 .advantage__button {
     width: 180px;
     /* padding: 10px 36px; */
-
     height: 47px;
     background-color: #68B7FF;
     border-radius: 20px;
@@ -114,4 +113,82 @@
 
 .advantage__item-content--security::before {
     background-image: url('../../img/security.svg');
+}
+
+
+
+@media(max-width: 860px) {
+    /*< 860px*/
+
+    .about-us__title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .advantage__list-btn {
+        gap: 13px;
+        margin-bottom: 35px;
+    }
+
+    .advantage__button {
+        width: 160px;
+        height: 39px;
+
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .advantage__list-content {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .advantage__item-content {
+        max-width: 560px;
+        gap: 30px;
+    }
+}
+
+
+
+@media(max-width: 720px) {
+    /*<720px*/
+
+    .advantage__list-btn {
+        max-width: 340px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media(max-width: 480px) {
+    /*< 480px*/
+
+    .advantage__list-btn {
+        margin-bottom: 30px;
+    }
+
+    .advantage__button {
+        width: 140px;
+        height: 39px;
+    }
+
+    .advantage__item-content {
+        width: 290px;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .advantage__item-content::before {
+        /* псведоэлемент картинка */
+        width: 60px;
+        height: 60px;
+    }
+
+
+
 }
