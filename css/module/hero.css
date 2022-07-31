@@ -1,5 +1,23 @@
 .hero {
-    background-image: url('../../img/hero-background.jpg');
+    background-image: url('../../img/hero-background_1x.jpg');
+    background-image: -webkit-image-set(url('../../img/hero-background_1x.avif') 1x,
+            /* будет  заружаться тот формат, котрый бразуер поддерживает */
+            /*для ретиновых экранов https://squoosh.app/editor:*/
+            url('../../img/hero-background_2x.avif') 2x,
+            url('../../img/hero-background_1x.webp') 1x,
+            url('../../img/hero-background_2x.webp') 2x,
+            url('../../img/hero-background_1x.jpg') 1x,
+            url('../../img/hero-background_2x.jpg') 2x);
+
+    background-image: image-set(url('../../img/hero-background_1x.avif') 1x,
+            /* будет  заружаться тот формат, котрый бразуер поддерживает */
+            url('../../img/hero-background_2x.avif') 2x,
+            url('../../img/hero-background_1x.webp') 1x,
+            url('../../img/hero-background_2x.webp') 2x,
+            url('../../img/hero-background_1x.jpg') 1x,
+            url('../../img/hero-background_2x.jpg') 2x);
+
+
     /* чтоб картинка растягивалась на сю ширину и высоту*/
     background-size: cover;
     background-position: center;
@@ -14,7 +32,6 @@
 .hero__container {
     padding-top: 127px;
     padding-bottom: 127px;
-
 }
 
 
@@ -36,7 +53,6 @@
     font-size: 22px;
     line-height: 29px;
     color: #FFFFFF;
-
 }
 
 
@@ -73,6 +89,27 @@
 
 
 @media(max-width: 768px) {
+
+    /*.hero {
+        /* background-image: -webkit-image-set(url('../../img/hero-background_1x.avif') 1x,
+                /* будет  заружаться тот формат, котрый бразуер поддерживает */
+    /*для ретиновых экранов https://squoosh.app/editor:
+        url('../../img/hero-background_2x.avif') 2x,
+        url('../../img/hero-background_1x.webp') 1x,
+        url('../../img/hero-background_2x.webp') 2x,
+        url('../../img/hero-background_1x.jpg') 1x,
+        url('../../img/hero-background_2x.jpg') 2x);
+
+        background-image: image-set(url('../../img/hero-background_1x.avif') 1x,
+                /* будет  заружаться тот формат, котрый бразуер поддерживает 
+                url('../../img/hero-background_2x.avif') 2x,
+                url('../../img/hero-background_1x.webp') 1x,
+                url('../../img/hero-background_2x.webp') 2x,
+                url('../../img/hero-background_1x.jpg') 1x,
+                url('../../img/hero-background_2x.jpg') 2x);
+
+    }
+    */
 
     /*<768*/
     .hero__container {

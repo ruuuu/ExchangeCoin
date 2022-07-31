@@ -11,17 +11,18 @@
 
     <title>Надежный сервис обмена криптовалют</title>
     <!-- предзагружаем шрифты чтобы он загружался после index.html, а потом остальные файлы-->
+    <!-- сервис беплатных шрифтов https://google-webfonts-helper.herokuapp.com/fonts-->
     <link rel="preload" href="fonts/inter-v11-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/ibm-plex-sans-v14-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/inter-v11-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/inter-v11-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="css/index.css">
-    <!-- type="module указываем чтобы при импортровании модулей в index.js скрпиты запусклись -->
+    <!-- type="module указываем чтобы при импортровании модулей в index.js скрпиты запускались: -->
     <script src="js/index.js" type="module"></script>
 
     <!-- <script src="js/modal.js" defer></script> -->
-    <!--defer значит что скрипт будет загружаться паралльено с версткой, как только верстка загрузится так сразу запутсится скрипт-->
+    <!--defer значит что  будет загружаться паралльено с версткой, как только верстка загрузится так сразу запутсится скрипт-->
 </head>
 
 <body>
@@ -30,8 +31,9 @@
             <img class="header__img" src="img/logo.svg" alt="Логотип Крипто">
 
             <button class="header__nav-btn" aria-label="Открыть меню">
-                <!--aria-label нужен  для слепых людей котрые используют програмы-читалки, когда на кнопках нет надписи его испоьзуют-->
-                <!--бургер для мобилок, в fill укажем currentColor чтобы можно бsло менять цвет из css-->
+                <!-- aria-label нужен  для слепых людей котрые используют програмы-читалки, когда на кнопках нет надписи aria-label испоьзуют -->
+                <!-- бургер для мобилок, в fill укажем currentColor чтобы можно бsло менять цвет из css -->
+                <!-- у svg используем fill="currentColor" чтобы можно было задавать цвет svg в css стилях -->
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.5 27H31.5V24H4.5V27ZM4.5 19.5H31.5V16.5H4.5V19.5ZM4.5 9V12H31.5V9H4.5Z" />
                 </svg>
@@ -44,7 +46,8 @@
                         <!-- у href="#about-us" чтобы при нажтии на нее, скроллили к секции about-us -->
                     </li>
                     <li class="navigation__item navigation__item--footer">
-                        <a href="" class="navigation__link">Частые вопросы</a>
+                        <!-- id указываем чтобы из вехнего меню можно был скроллить к этой секции: -->
+                        <a href="#faq" class="navigation__link">Частые вопросы</a>
                     </li>
                 </ul>
             </nav>
@@ -66,7 +69,7 @@
 
         <section class="about-us">
             <div class="container" id="about-us">
-                <!-- id указываем чтобы из вехнего меню можно был скроллить к этой секции-->
+                <!-- id указываем чтобы из вехнего меню можно был скроллить к этой секции: -->
                 <h2 class="about-us__title">Почему выбирают нас?</h2>
 
                 <div class="about-us__container">
@@ -112,7 +115,7 @@
 
                         <ul class="exchange-rates__list">
                             <li class="exchange-rates__item exchange-rates__item--up">
-                                <!-- этот класс exchange-rates__item--up нужен чтобы пседоэлемнет добавить(зеленая/крансая стрлеочка)-->
+                                <!-- этот класс exchange-rates__item--up нужен чтобы псевдоэлемнет добавить(зеленая/крансая стрлеочка)-->
                                 <span class="exchange-rates__currency">RUB/AUD</span>
                                 <span class="exchange-rates__value">25.59</span>
                             </li>
@@ -136,7 +139,7 @@
 
 
         <section class="faq" id="faq">
-            <!-- id указываем чтобы из вехнего меню можно был скроллить к этой секции-->
+            <!-- id у section указываем чтобы из вехнего меню можно был скроллить к этой секции-->
             <div class="container faq__container">
                 <h2 class="faq__title">Частые вопросы</h2>
 
@@ -189,7 +192,7 @@
 
 
     <div class="overlay">
-        <!--затемененная область вокруг мод окна-->
+        <!-- overlay - затемененная область вокруг мод окна -->
         <div class="modal">
             <div class="modal__container">
                 <h2 class="modal__titile">Мгновенная регистрация на платформе</h2>
@@ -210,11 +213,11 @@
                     </fieldset>
 
                     <button class="modal__order" type="submit">Зарегистрироваться!</button>
-                    <!--type="submit" нужен для отправки данных-->
+                    <!-- type="submit" нужен для отправки данных -->
                 </form>
 
                 <button class="modal__close" type="button" arai-label="кнопка закрытия">
-                    <!--по умолчнию у  всех кнопок тип submit. А если  пропсиать type="button" то кнопка не будет отправлять данные.-->
+                    <!-- по умолчнию у всех кнопок type="submit". А если  пропсиать type="button" то кнопка не будет отправлять данные -->
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path

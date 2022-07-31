@@ -47,7 +47,7 @@ form.addEventListener('submit', (evt) => { // событие отрпавки ф
 
     fetch('https://api-form-order.herokuapp.com/api/order', { // отправляем данные на этот сервер
         method: 'post',
-        body: JSON.stringify(data),  // на сервер отправляем  тело запроса: json-строку, не объект. JSON.stringify(obj) преобразовывает объект в строку
+        body: JSON.stringify(data),  // на сервер отправляем  тело запроса: json-строку, не объект! JSON.stringify(obj) преобразовывает объект в строку
     })
         // метод fetch отправляет даные на сервер , ждет ответа и  возвращет промис, его обраббатываем  в методе then() ответ от сервера
         .then((response) => response.json())  // response - ответ от сервера, его обрабабтываем в виде response.json()  вернет промис, привели в  json
@@ -70,3 +70,12 @@ form.addEventListener('submit', (evt) => { // событие отрпавки ф
 
 
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log(DOMContentLoaded);
+})
+
+window.addEventListener('load', () => { //  событие 'load'  испоьзуеют когда надо вычислить размеры картинки, а это мы можем определить только когда картинка загрузится
+
+})

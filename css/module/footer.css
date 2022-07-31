@@ -17,17 +17,19 @@
     ;
 }
 
+
 .footer__logo {
     /*грид элемент*/
     grid-area: logo;
 }
 
-.footer__navigation {
 
+.footer__navigation {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
 }
+
 
 .navigation {
     /*грид элемент*/
@@ -42,12 +44,15 @@
 
 .navigation__link {}
 
+
+
 .footer__copyright {
     /*грид элемент*/
     grid-area: copyright;
     font-size: 12px;
     line-height: 130%;
 }
+
 
 .footer__design {
     /*грид элемент*/
@@ -63,6 +68,7 @@
 /* justidy-self - выравнивает  по горизонтали грид элемнт относитльено грид ячейки */
 
 
+
 @media(max-width: 768px) {
 
     .footer__navigation {
@@ -70,6 +76,8 @@
         line-height: 17px;
     }
 }
+
+
 
 @media(max-width: 480px) {
 

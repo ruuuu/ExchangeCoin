@@ -32,17 +32,15 @@
     /* флекс элемент*/
     /* здесь растягиваться не будет, задаем фиксированное значение*/
     max-width: 380px;
-
 }
 
 
 @media(max-width: 1024px) {
-    /*<1024px*/
+    /* <1024px */
 
     .about-us__container {
-        /*флекс элемент  можно переносить*/
+        /*флекс элемент  можно переноситься если не будет вмещаться:*/
         flex-wrap: wrap;
-
         flex-direction: column;
         align-items: center;
         gap: 80px;
@@ -52,11 +50,9 @@
 
 
 @media(max-width: 860px) {
-    /*<860px*/
+    /* <860px */
 
     .about-us__container {
         gap: 60px;
     }
-
-
 }

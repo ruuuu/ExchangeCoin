@@ -5,6 +5,8 @@
     background-color: #fff;
 }
 
+
+
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -14,10 +16,12 @@
     background-color: #fff;
 }
 
+
 .header__nav-btn {
     /* кнпока мобилки */
     display: none;
 }
+
 
 
 @media (max-width: 768px) {
@@ -56,5 +60,4 @@
         transform: translateY(calc(100% - 1px));
 
     }
-
 }
