@@ -13,6 +13,7 @@ html {
 
 body {
     min-width: 320px;
+    /*чтобы была возможномть растгяивать элементы  входящие(main, header, footer) в body. 100vh это 100% высоты от вьюпорта(видимая область):*/
     min-height: 100vh;
     font-family: Inter, sans-serif;
     /*sans-serif(без засечек) запасной шрифт, если iNter не подключиться*/
